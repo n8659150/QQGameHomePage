@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>QQ游戏大厅主页</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="headerWrapper flex flex-middle space-between">
+				<!-- logo -->
+				<a class="QQgameLogo" href="#">QQ游戏大厅</a>
+				<!-- search -->
+				<div class="top-search">
+					<input type="text" placeholder="火影忍者">
+					<button onclick="" id="top-search-btn"></button>
+				</div>
+				<div class="flex flex-middle">
+					<a class="top-download" href="#">下载QQ游戏2.0</a>
+					<a class="top-avatar" href="#"></a>
+				</div>
+			</div>
+		</header>
+		<nav>
+			<div class="navWrapper flex">
+			<a href="#" class="active">首页</a>
+			<a href="#">页游</a>
+			<a href="#">休闲棋牌</a>
+			<a href="#">单机</a>
+			<a href="#">街机</a>
+			<a href="#">手游(电脑版)</a>
+			<a href="#">小游戏</a>
+			<a href="#">直播</a>
+			<a href="#">赛事</a>
+			<a href="#">专题</a>
+			</div>
+		</nav>
+	</div>
+	<div id="slider" style="position:relative;">
+		<ul>
+			<li>
+				<!-- 轮播图，a标签的背景图片为轮播图图片 -->
+				<a id="slider-1"></a>
+			</li>
+		</ul>
+		<!-- 包裹层，宽度1120px -->
+		<div class="headerWrapper" style="position:absolute;top:0;right:0;bottom:0;left:0;">
+			<!-- 图中高亮部分 -->
+			<div id="slider-thumbnail" style="position:absolute;right:0;top:14px;">
+			<ul>
+				<li>
+					<div onmouseover="setActive(this)" onmouseout="cancelActive(this)" class="thumbnail-item flex flex-middle" style="overflow:hidden;width:278px;">
+						<img src="images/poker.jpg" class="active" alt="二人斗地主图片">
+						<div>
+						<h2 class="title active">二人斗地主</h2>
+						<p class="intro">斗地主是一款在传统斗地主基础上的扩充玩法，除了传统的牌型</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div onmouseover="setActive(this)" onmouseout="cancelActive(this)" class="thumbnail-item flex flex-middle" style="overflow:hidden;width:278px;">
+						<img src="images/dragon.jpg" alt="龙之牧场图片">
+						<div>
+						<h2 class="title">龙之牧场</h2>
+						<p class="intro">魔幻养成游戏巨作《龙之牧场》震撼登场！集结的号角已经响起，神</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div onmouseover="setActive(this)" onmouseout="cancelActive(this)" class="thumbnail-item flex flex-middle" style="overflow:hidden;width:278px;">
+						<img src="images/snake.jpg" alt="蛇蛇争霸图片">
+						<div>
+						<h2 class="title">蛇蛇争霸</h2>
+						<p class="intro">《蛇蛇争霸》是一款超好玩、超Q萌的休闲竞技游戏，不仅比拼手速</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div onmouseover="setActive(this)" onmouseout="cancelActive(this)" class="thumbnail-item flex flex-middle" style="overflow:hidden;width:278px;">
+						<img src="images/teenagerHeros.jpg" alt="少年群侠传图片">
+						<div>
+						<h2 class="title">少年群侠传</h2>
+						<p class="intro">《少年群侠传》是一款Q版骑战ARPG网页游戏，拥有媲美客户端</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		</div>
+	</div>
+	<script src="js/slider.js"></script>
+</body>
+</html>
