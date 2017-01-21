@@ -96,18 +96,25 @@ nav a:hover,nav .active {
 	min-width:1120px;
 	height:380px;
 	min-height:380px;
+	/*animation:fadeIn 4s linear 0ms infinite normal forwards;*/
 }
-
+/*@-webkit-keyframes fadeIn{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
+ }*/
 #slider ul,#slider li {
 	width:100%;
 	height:100%;
 }
 
-#slider-1 {
+#slider {
 	display:block;
 	width:100%;
 	height:100%;
-	background:url("../images/slider-1.jpg") no-repeat;
 }
 
 .thumbnail-item {
@@ -149,4 +156,80 @@ nav a:hover,nav .active {
 #slider-thumbnail .intro {
 	width:85%;
 	margin:0 auto;
+}
+
+.login-bar {
+	width:100%;
+	height:50px;
+	min-height:50px;
+	background-color:#F6F6F6;
+	color:#888888;
+	margin-bottom:20px;
+}
+
+.login-bar a {
+	color:#FF5A00;
+	text-decoration:underline;
+}
+
+.main-left {
+	height:500px;
+	flex:3;
+	margin-right:20px;
+}
+
+.main-left-title {
+	font-size:2rem;
+	margin-bottom:15px;
+}
+.category-title {
+	border-left:5px solid #FF5A00;
+	height:20px;
+	line-height:20px;
+	padding-left:10px;
+}
+.category-tab {
+	flex:1;
+	height:135px;
+	border:1px solid #ccc;
+}
+.category-tab a {
+    display: inline-block;
+    margin: 0 6px;
+    font-size: 1.4rem;
+    color: #666666;
+}
+
+.category-tab a:after {
+	content:"|";
+	margin-left:8px;
+	color:#cccccc;
+}
+
+.category-tab .sub-title {
+	font-weight:bold;
+	margin-top:10px;
+}
+.sort-content {
+	border-top:2px solid #FF5A00;
+}
+
+.sort-icon {
+	display:block;
+	width:70px;
+	height:70px;
+}
+
+.sort-content-icon  {
+	background:url('../images/qqgamesprite.png') no-repeat 0 -250px;
+}
+.sort-category {
+	border-top:2px solid #147FE2;
+	/*fix double border*/
+	margin-left:-1px; 
+}
+
+.sort-tags {
+	border-top:2px solid #FEA42B;
+	margin-left:-1px;
 }

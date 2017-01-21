@@ -13,11 +13,12 @@
 			<div class="headerWrapper flex flex-middle space-between">
 				<!-- logo -->
 				<a class="QQgameLogo" href="#">QQ游戏大厅</a>
-				<!-- search -->
+				<!-- 搜索框 -->
 				<div class="top-search">
 					<input type="text" placeholder="火影忍者">
 					<button onclick="" id="top-search-btn"></button>
 				</div>
+				<!-- 右侧下载链接 -->
 				<div class="flex flex-middle">
 					<a class="top-download" href="#">下载QQ游戏2.0</a>
 					<a class="top-avatar" href="#"></a>
@@ -39,11 +40,11 @@
 			</div>
 		</nav>
 	</div>
-	<div id="slider" style="position:relative;">
+	<div style="position:relative;">
 		<ul>
 			<li>
 				<!-- 轮播图，a标签的背景图片为轮播图图片 -->
-				<a id="slider-1"></a>
+				<a id="slider"></a>
 			</li>
 		</ul>
 		<!-- 包裹层，宽度1120px -->
@@ -88,8 +89,44 @@
 					</div>
 				</li>
 			</ul>
+			</div>
 		</div>
+	</div>
+	<!-- 轮播图下方登录链接 -->
+	<div class="login-bar flex flex-middle flex-center"><a href="#">立即登录</a>&nbsp;,&nbsp;查看我的游戏及好友在玩</div>
+	<div class="headerWrapper flex">
+		<!-- 主要内容区域-左侧部分开始 -->
+		<div class="main-left">
+			<h3 class="main-left-title category-title">热门导航</h3>
+			<div class="flex">
+				<!-- 按题材划分 -->
+				<div class="category-tab sort-content flex">
+					<div class="flex flex-middle flex-center" style="flex-direction:column;flex:1.5;">
+						<i class="sort-icon sort-content-icon"></i>
+						<span class="sub-title">按游戏题材</span>
+					</div>
+					<div class="sort-content-links flex flex-middle" style="flex:2.5;">
+						<ul class="flex" style="flex-wrap:wrap;">
+							<li><a href="#">历史</a></li>
+							<li><a href="#">魔幻</a></li>
+							<li><a href="#">三消</a></li>
+							<li><a href="#">跑酷</a></li>
+							<li><a href="#">棋牌</a></li>
+							<li><a href="#">武侠</a></li>
+							<li><a href="#">现实</a></li>
+							<li><a href="#">玄幻</a></li>
+							<li><a href="#">科幻</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- 按玩法划分 -->
+				<div class="category-tab sort-category"></div>
+				<!-- 按标签划分 -->
+				<div class="category-tab sort-tags"></div>
+			</div>
 		</div>
+		<!-- 主要内容区域-右侧部分开始 -->
+		<div class="main-right" style="background-color:brown;height:500px;flex:1;">2</div>
 	</div>
 	<script src="js/slider.js"></script>
 </body>
