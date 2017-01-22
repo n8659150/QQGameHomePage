@@ -7,6 +7,9 @@
 .flex-middle {
 	align-items:center;
 }
+.flex-bottom {
+	align-items:flex-end;
+}
 .flex-center {
 	justify-content:center;
 }

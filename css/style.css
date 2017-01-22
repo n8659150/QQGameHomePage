@@ -27,7 +27,7 @@ header {
 	width:145px;
 	height:50px;
 	text-indent:-9999em;
-	background: url("../images/logo_qqgame.png") no-repeat center;
+	background: url("../images/navigation/logo_qqgame.png") no-repeat center;
 }
 
 .top-search {
@@ -44,7 +44,7 @@ header {
 	width:19px;
 	height:19px;
 	border:none;
-	background:url("../images/header_sprite.png") no-repeat -48px 0;
+	background:url("../images/sprites/header_sprite.png") no-repeat -48px 0;
 	vertical-align:middle;
 	cursor:pointer;
 }
@@ -54,7 +54,7 @@ header {
 	font-size:1.2rem;
 	color:#B0B0B0;
 	border-right:1px solid #EBEBEB;
-	background:url("../images/download.png") no-repeat top center;
+	background:url("../images/global/download.png") no-repeat top center;
 }
 
 .top-avatar {
@@ -62,7 +62,7 @@ header {
 	height:38px;
 	border-radius:38px;
 	margin-left:15px;
-	background:url("../images/avatar.png") no-repeat top center;
+	background:url("../images/global/avatar.png") no-repeat top center;
 }
 nav {
 	height:47px;
@@ -76,7 +76,7 @@ nav a {
 	line-height:47px;
 	text-align:center;
 	flex:1 0 auto;
-	background:url("../images/nav_sep.png") no-repeat right 17px;
+	background:url("../images/navigation/nav_sep.png") no-repeat right 17px;
 }
 nav a:last-child {
 	background:none;
@@ -99,12 +99,12 @@ nav a:hover,nav .active {
 	/*animation:fadeIn 4s linear 0ms infinite normal forwards;*/
 }
 /*@-webkit-keyframes fadeIn{
-    0%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0.5;
-    }
+	0%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0.5;
+	}
  }*/
 #slider ul,#slider li {
 	width:100%;
@@ -130,7 +130,9 @@ nav a:hover,nav .active {
 
 #slider-thumbnail img.active {
 	width:68px;
+	min-width:68px;
 	height:68px;
+	min-height:68px;
 	border:3px solid #FF5A00;
 }
 
@@ -178,7 +180,7 @@ nav a:hover,nav .active {
 	margin-right:20px;
 }
 
-.main-left-title {
+.main-title {
 	font-size:2rem;
 	margin-bottom:15px;
 }
@@ -194,10 +196,10 @@ nav a:hover,nav .active {
 	border:1px solid #ccc;
 }
 .category-tab a {
-    display: inline-block;
-    margin: 0 6px;
-    font-size: 1.4rem;
-    color: #666666;
+	display: inline-block;
+	margin: 0 6px;
+	font-size: 1.4rem;
+	color: #666666;
 }
 
 .category-tab a:after {
@@ -221,7 +223,15 @@ nav a:hover,nav .active {
 }
 
 .sort-content-icon  {
-	background:url('../images/qqgamesprite.png') no-repeat 0 -250px;
+	background:url('../images/sprites/qqgamesprite.png') no-repeat 0 -250px;
+}
+
+.sort-category-icon {
+	background:url('../images/sprites/qqgamesprite.png') no-repeat 0 -390px;
+}
+
+.sort-tag-icon {
+	background:url('../images/sprites/qqgamesprite.png') no-repeat 0 -320px;
 }
 .sort-category {
 	border-top:2px solid #147FE2;
@@ -232,4 +242,155 @@ nav a:hover,nav .active {
 .sort-tags {
 	border-top:2px solid #FEA42B;
 	margin-left:-1px;
+}
+
+.hot-game-showMore {
+	color:#999999;
+	font-size:1.4rem;
+}
+.hot-game-showMore:hover {
+	color:#FF5A00;
+}
+#hot-games,#latest-games {
+	flex-wrap:wrap;
+}
+#hot-games .rating-bar,#latest-games .rating-bar {
+	flex:1;
+	height:24px;
+	background: rgba(0,0,0,0.5);
+	font-size:1.2rem;
+	margin:0 5px;
+}
+.rating-bar .category {
+	color:#FFFFFF;
+}
+.rating-bar .rating {
+	color:#FF5A00;
+}
+.game-tab {
+	width:150px;
+	min-width:150px;
+	height:215px;
+	min-height:215px;
+}
+
+.game-tab.tab-001 {
+	background:url("../images/hot-game-pics/001.jpg") no-repeat center;
+}
+.game-tab.tab-002 {
+	background:url("../images/hot-game-pics/002.jpg") no-repeat center;
+}
+.game-introWrap {
+	margin:3px auto 15px auto;
+	text-align:center;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	width: 150px;
+}
+
+.game-title {
+	color:#111;
+	font-weight:bold;
+}
+
+.game-description {
+	color:#999999;
+	line-height:18px;
+	font-size:1.3rem;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+/*右侧*/
+.download-tab {
+	margin-bottom:15px;
+}
+
+.download-QGame-title,.top-ranking-title {
+	height:20px;
+	line-height:20px;
+}
+
+.QGameDownload {
+	display:block;
+	width:278px;
+	min-width:278px;
+	height:108px;
+	min-height:108px;
+	background:url("../images/global/Qgame-download.png") no-repeat;
+	position: relative;
+	top: -14px;
+}
+
+.platform-selection {
+	height:40px;
+	margin-top:-14px;
+}
+
+.platform-selection a {
+	flex:1;
+	height:100%;
+	border:1px solid #ccc;
+	text-align: center;
+	line-height: 40px;
+	color:#666666;
+}
+
+.platform-selection a:hover {
+	color:#FF5A00;
+}
+
+.platform-selection a:last-child {
+	margin-left:-1px;
+}
+.platform-selection i {
+	display:inline-block;
+	width:17px;
+	height:17px;
+	margin-right:5px;
+	
+}
+.platform-selection .tab-pc {
+	background:url('../images/sprites/qqgamesprite.png') no-repeat 0 -88px;
+}
+.platform-selection .tab-mobile {
+	background:url('../images/sprites/qqgamesprite.png') no-repeat 0 -71px;
+	margin-left:-1px;
+}
+
+.ranking-selection .ranking-selection-title {
+	flex:1;
+	height:35px;
+	min-height:35px;
+	border:1px solid #E3E3E3;
+	background-color:#F5F5F5;
+}
+
+.ranking-selection .ranking-selection-title.active {
+	font-weight:bold;
+	background-color:#FFFFFF;
+	border-bottom-color:transparent;
+}
+
+.ranking-content-wrapper {
+	flex-direction:column;
+}
+.ranking-content {
+	height:36px;
+	min-height:36px;
+}
+.ranking-content .ranking-number {
+	font-size:1.4rem;
+	color:#7F7F7F;
+	text-align:right;
+	margin-right:8px;
+}
+.ranking-content .ranking-number.top-3 {
+	font-size:2.8rem;
+	color:#FF5A00;
+}
+
+.ranking-content .ranking-count {
+	color:#7F7F7F;
 }

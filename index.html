@@ -53,8 +53,8 @@
 			<div id="slider-thumbnail" style="position:absolute;right:0;top:14px;">
 			<ul>
 				<li>
-					<div onmouseover="setActive(this)" onmouseout="cancelActive(this)" class="thumbnail-item flex flex-middle" style="overflow:hidden;width:278px;">
-						<img src="images/poker.jpg" class="active" alt="二人斗地主图片">
+					<div class="thumbnail-item flex flex-middle" style="overflow:hidden;width:278px;">
+						<img src="images/thumbnails/poker.jpg" class="active" width="74px" height="74px" alt="二人斗地主图片">
 						<div>
 						<h2 class="title active">二人斗地主</h2>
 						<p class="intro">斗地主是一款在传统斗地主基础上的扩充玩法，除了传统的牌型</p>
@@ -62,8 +62,8 @@
 					</div>
 				</li>
 				<li>
-					<div onmouseover="setActive(this)" onmouseout="cancelActive(this)" class="thumbnail-item flex flex-middle" style="overflow:hidden;width:278px;">
-						<img src="images/dragon.jpg" alt="龙之牧场图片">
+					<div class="thumbnail-item flex flex-middle" style="overflow:hidden;width:278px;">
+						<img src="images/thumbnails/dragon.jpg" width="74px" height="74px" alt="龙之牧场图片">
 						<div>
 						<h2 class="title">龙之牧场</h2>
 						<p class="intro">魔幻养成游戏巨作《龙之牧场》震撼登场！集结的号角已经响起，神</p>
@@ -71,8 +71,8 @@
 					</div>
 				</li>
 				<li>
-					<div onmouseover="setActive(this)" onmouseout="cancelActive(this)" class="thumbnail-item flex flex-middle" style="overflow:hidden;width:278px;">
-						<img src="images/snake.jpg" alt="蛇蛇争霸图片">
+					<div class="thumbnail-item flex flex-middle" style="overflow:hidden;width:278px;">
+						<img src="images/thumbnails/snake.jpg" width="74px" height="74px" alt="蛇蛇争霸图片">
 						<div>
 						<h2 class="title">蛇蛇争霸</h2>
 						<p class="intro">《蛇蛇争霸》是一款超好玩、超Q萌的休闲竞技游戏，不仅比拼手速</p>
@@ -80,8 +80,8 @@
 					</div>
 				</li>
 				<li>
-					<div onmouseover="setActive(this)" onmouseout="cancelActive(this)" class="thumbnail-item flex flex-middle" style="overflow:hidden;width:278px;">
-						<img src="images/teenagerHeros.jpg" alt="少年群侠传图片">
+					<div class="thumbnail-item flex flex-middle" style="overflow:hidden;width:278px;">
+						<img src="images/thumbnails/teenagerHeros.jpg" width="74px" height="74px" alt="少年群侠传图片">
 						<div>
 						<h2 class="title">少年群侠传</h2>
 						<p class="intro">《少年群侠传》是一款Q版骑战ARPG网页游戏，拥有媲美客户端</p>
@@ -97,8 +97,9 @@
 	<div class="headerWrapper flex">
 		<!-- 主要内容区域-左侧部分开始 -->
 		<div class="main-left">
-			<h3 class="main-left-title category-title">热门导航</h3>
-			<div class="flex">
+			<!-- 热门导航 -->
+			<h3 class="main-title category-title">热门导航</h3>
+			<div class="flex" style="margin-bottom:15px;">
 				<!-- 按题材划分 -->
 				<div class="category-tab sort-content flex">
 					<div class="flex flex-middle flex-center" style="flex-direction:column;flex:1.5;">
@@ -120,14 +121,406 @@
 					</div>
 				</div>
 				<!-- 按玩法划分 -->
-				<div class="category-tab sort-category"></div>
+				<div class="category-tab sort-category flex">
+					<div class="flex flex-middle flex-center" style="flex-direction:column;flex:1.5;">
+						<i class="sort-icon sort-category-icon"></i>
+						<span class="sub-title">按游戏玩法</span>
+					</div>
+					<div class="sort-content-links flex flex-middle" style="flex:2.5;">
+						<ul class="flex" style="flex-wrap:wrap;">
+							<li><a href="#">历史</a></li>
+							<li><a href="#">魔幻</a></li>
+							<li><a href="#">三消</a></li>
+							<li><a href="#">跑酷</a></li>
+							<li><a href="#">棋牌</a></li>
+							<li><a href="#">武侠</a></li>
+							<li><a href="#">现实</a></li>
+							<li><a href="#">玄幻</a></li>
+							<li><a href="#">科幻</a></li>
+						</ul>
+					</div>
+				</div>
 				<!-- 按标签划分 -->
-				<div class="category-tab sort-tags"></div>
+				<div class="category-tab sort-tags flex">
+					<div class="flex flex-middle flex-center" style="flex-direction:column;flex:1.5;">
+						<i class="sort-icon sort-tag-icon"></i>
+						<span class="sub-title">按游戏标签</span>
+					</div>
+					<div class="sort-content-links flex flex-middle" style="flex:2.5;">
+						<ul class="flex" style="flex-wrap:wrap;">
+							<li><a href="#">历史</a></li>
+							<li><a href="#">魔幻</a></li>
+							<li><a href="#">三消</a></li>
+							<li><a href="#">跑酷</a></li>
+							<li><a href="#">棋牌</a></li>
+							<li><a href="#">武侠</a></li>
+							<li><a href="#">现实</a></li>
+							<li><a href="#">玄幻</a></li>
+							<li><a href="#">科幻</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
+			<!-- 热门导航结束 -->
+
+			<!-- 热门游戏 -->
+			<div class="flex space-between flex-middle">
+				<h3 class="main-title" style="margin-bottom:5px;">热门游戏</h3>
+				<a class="hot-game-showMore" href="#">更多</a>
+			</div>
+			<!-- 热门游戏 tab区域 -->
+			
+			<div id="hot-games" class="flex space-between">
+				<!-- 第一行 -->
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<!-- 第一行结束 -->
+
+				<!-- 第二行 -->
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<!-- 第二行结束 -->
+			</div>
+			<!-- 热门游戏结束 -->
+
+			<!-- 最新游戏 -->
+			<div class="flex space-between flex-middle">
+				<h3 class="main-title" style="margin-bottom:5px;">最新游戏</h3>
+				<a class="hot-game-showMore" href="#">更多</a>
+			</div>
+			<!-- 最新游戏 tab区域 -->
+			<div id="latest-games" class="flex space-between">
+				<!-- 第一行 -->
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<!-- 第一行结束 -->
+
+				<!-- 第二行 -->
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<div>
+					<div class="game-tab flex flex-bottom">
+						<div class="rating-bar flex flex-middle space-between">
+							<span class="category">牌类</span>
+							<span class="rating">4.2分</span>
+						</div>
+					</div>
+					<div class="game-introWrap">
+						<h3 class="game-title">天天德州</h3>
+						<p class="game-description">腾讯精品制造的德州扑克游戏有很多任务爱无能</p>
+					</div>
+				</div>
+				<!-- 第二行结束 -->
+			</div>
+			<!-- 最新游戏结束 -->
 		</div>
 		<!-- 主要内容区域-右侧部分开始 -->
-		<div class="main-right" style="background-color:brown;height:500px;flex:1;">2</div>
+		<div class="main-right" style="flex:1;">
+			<!-- 下载区域 -->
+			<h3 class="main-title download-QGame-title">下载QQ游戏</h3>
+			<div class="download-tab">
+				<a class="QGameDownload" href="#"></a>
+				<div class="flex platform-selection">
+					<a class="flex flex-center flex-middle" href="#"><i class="tab-pc"></i>PC怀旧版</a>
+					<a class="flex flex-center flex-middle" href="#"><i class="tab-mobile" ></i>下载手机版</a>
+				</div>
+			</div>
+			<!-- 下载区域结束 -->
+			<!-- 排行榜 -->
+			<h3 class="main-title top-ranking-title">排行榜</h3>
+			<div class="top-ranking-tab">
+				<div class="ranking-selection flex">
+					<span class="flex flex-middle flex-center ranking-selection-title active">热门榜单</span>
+					<span class="flex flex-middle flex-center ranking-selection-title" style="margin-left:-1px;">新游首发</span>
+				</div>
+				<div class="flex ranking-content-wrapper">
+						<div class="ranking-content flex flex-middle flex-center">
+							<span class="ranking-number top-3" style="flex:1;">1</span>
+							<span class="ranking-name" style="flex:5;">夺宝斗地主</span>
+							<span class="ranking-count" style="flex:3;">1079744</span>
+						</div>
+						<div class="ranking-content flex flex-middle flex-center">
+							<span class="ranking-number top-3" style="flex:1;">2</span>
+							<span class="ranking-name" style="flex:5;">夺宝斗地主</span>
+							<span class="ranking-count" style="flex:3;">1079744</span>
+						</div>
+						<div class="ranking-content flex flex-middle flex-center">
+							<span class="ranking-number top-3" style="flex:1;">3</span>
+							<span class="ranking-name" style="flex:5;">夺宝斗地主</span>
+							<span class="ranking-count" style="flex:3;">1079744</span>
+						</div>
+						<div class="ranking-content flex flex-middle flex-center">
+							<span class="ranking-number" style="flex:1;">4</span>
+							<span class="ranking-name" style="flex:5;">夺宝斗地主</span>
+							<span class="ranking-count" style="flex:3;">1079744</span>
+						</div>
+						<div class="ranking-content flex flex-middle flex-center">
+							<span class="ranking-number" style="flex:1;">5</span>
+							<span class="ranking-name" style="flex:5;">夺宝斗地主</span>
+							<span class="ranking-count" style="flex:3;">1079744</span>
+						</div>
+						<div class="ranking-content flex flex-middle flex-center">
+							<span class="ranking-number" style="flex:1;">6</span>
+							<span class="ranking-name" style="flex:5;">夺宝斗地主</span>
+							<span class="ranking-count" style="flex:3;">1079744</span>
+						</div>
+						<div class="ranking-content flex flex-middle flex-center">
+							<span class="ranking-number" style="flex:1;">7</span>
+							<span class="ranking-name" style="flex:5;">夺宝斗地主</span>
+							<span class="ranking-count" style="flex:3;">1079744</span>
+						</div>
+						<div class="ranking-content flex flex-middle flex-center">
+							<span class="ranking-number" style="flex:1;">8</span>
+							<span class="ranking-name" style="flex:5;">夺宝斗地主</span>
+							<span class="ranking-count" style="flex:3;">1079744</span>
+						</div>
+						<div class="ranking-content flex flex-middle flex-center">
+							<span class="ranking-number" style="flex:1;">9</span>
+							<span class="ranking-name" style="flex:5;">夺宝斗地主</span>
+							<span class="ranking-count" style="flex:3;">1079744</span>
+						</div>
+						<div class="ranking-content flex flex-middle flex-center">
+							<span class="ranking-number" style="flex:1;">10</span>
+							<span class="ranking-name" style="flex:5;">夺宝斗地主</span>
+							<span class="ranking-count" style="flex:3;">1079744</span>
+						</div>
+						<div class="ranking-content flex flex-middle flex-center">
+							<span class="ranking-number" style="flex:1;">11</span>
+							<span class="ranking-name" style="flex:5;">夺宝斗地主</span>
+							<span class="ranking-count" style="flex:3;">1079744</span>
+						</div>
+						<div class="ranking-content flex flex-middle flex-center">
+							<span class="ranking-number" style="flex:1;">12</span>
+							<span class="ranking-name" style="flex:5;">夺宝斗地主</span>
+							<span class="ranking-count" style="flex:3;">1079744</span>
+						</div>
+					</div>
+			</div>
+			<!-- 排行榜结束 -->
+		</div>
 	</div>
 	<script src="js/slider.js"></script>
+	<script src="js/gameTabPicLoader.js"></script>
+	
 </body>
 </html>
