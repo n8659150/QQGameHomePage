@@ -175,7 +175,6 @@ nav a:hover,nav .active {
 }
 
 .main-left {
-	height:500px;
 	flex:3;
 	margin-right:20px;
 }
@@ -304,7 +303,7 @@ nav a:hover,nav .active {
 
 /*右侧*/
 .download-tab {
-	margin-bottom:15px;
+	margin-bottom:20px;
 }
 
 .download-QGame-title,.top-ranking-title {
@@ -344,6 +343,7 @@ nav a:hover,nav .active {
 .platform-selection a:last-child {
 	margin-left:-1px;
 }
+
 .platform-selection i {
 	display:inline-block;
 	width:17px;
@@ -358,7 +358,9 @@ nav a:hover,nav .active {
 	background:url('../images/sprites/qqgamesprite.png') no-repeat 0 -71px;
 	margin-left:-1px;
 }
-
+.top-ranking-tab {
+	margin-bottom:75px;
+}
 .ranking-selection .ranking-selection-title {
 	flex:1;
 	height:35px;
@@ -393,4 +395,39 @@ nav a:hover,nav .active {
 
 .ranking-content .ranking-count {
 	color:#7F7F7F;
+}
+
+.new-server-title {
+    border-bottom:1px solid #E5E5E5;
+    height:40px;
+    margin-bottom:0;
+}
+
+.new-server-header {
+	margin-bottom:5px;
+}
+
+.server-game-icon {
+	width:16px;
+	height:16px;
+	background: url(../images/server-timetable-pics/0.png) no-repeat;
+	background-size:cover;
+	margin-right:5px;
+}
+.server-game-name {
+	font-weight:bold;
+}
+.new-server-content {
+    color: #666666;
+    margin-top: 10px;
+}
+.new-server-content:hover {
+	color:#FF5A00;
+}
+.server-time {
+	padding-left: 20px;
+    background: url(../images/sprites/qqgamesprite.png) no-repeat 0 -40px;
+    display: inline-block;
+    height: 15px;
+    line-height: 15px;
 }

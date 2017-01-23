@@ -41,5 +41,8 @@ function sliderChange(){
 	oSlider.style.background = "url(images/slides/slider-"+ (sliderIndex) +".jpg) no-repeat";
 	sliderIndex>3?sliderIndex=1:sliderIndex++;
 };
-setInterval(sliderChange, 4000);	
+window.onload = function(){
+	setInterval(sliderChange, 4000);
+}
+	
 
