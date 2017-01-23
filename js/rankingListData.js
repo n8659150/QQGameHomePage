@@ -18,8 +18,8 @@ let hotRankingList = [
 ]
 let newGameRankingList = [
 	{rank:1,name:"欢乐斗地主",count:12263760},
-	{rank:3,name:"夺宝斗地主",count:11129088},
-	{rank:2,name:"蛇蛇争霸",count:1848812},
+	{rank:2,name:"夺宝斗地主",count:11129088},
+	{rank:3,name:"蛇蛇争霸",count:1848812},
 	{rank:4,name:"欢乐麻将全集",count:624418},
 	{rank:5,name:"犀利蛇",count:490240},
 	{rank:6,name:"海底大作战",count:407488},
@@ -32,10 +32,10 @@ let newGameRankingList = [
 ]
 function rankingListLoader(list){
 	for(let i=0;i<aRankingItems.length;i++){
-		aRankingItems[i].getElementsByClassName("ranking-number")[0].innerHTML=(i+1);
 		for(let j=0;j<list.length;j++){
-			aRankingItems[j].getElementsByClassName("ranking-name")[0].innerHTML=list[j].name;
-			aRankingItems[j].getElementsByClassName("ranking-count")[0].innerHTML=list[j].count;
+			aRankingItems[j].getElementsByClassName("ranking-number")[0].innerHTML=list[j]["rank"];
+			aRankingItems[j].getElementsByClassName("ranking-name")[0].innerHTML=list[j]["name"];
+			aRankingItems[j].getElementsByClassName("ranking-count")[0].innerHTML=list[j]["count"];
 		}
 	}
 }
