@@ -4,7 +4,6 @@ oSlider.style.background = "url(images/slides/slider-1.jpg) no-repeat";
 var sliderIndex = 1;
 // 初始化右侧thumbnail小图片
 let oSliderThumb = document.getElementById("slider-thumbnail");
-
 //给轮播图右侧thumbnail设置悬停高亮及移出取消
 let oLis = oSliderThumb.getElementsByTagName("li");
 
@@ -41,8 +40,7 @@ function sliderChange(){
 	oSlider.style.background = "url(images/slides/slider-"+ (sliderIndex) +".jpg) no-repeat";
 	sliderIndex>3?sliderIndex=1:sliderIndex++;
 };
-window.onload = function(){
-	setInterval(sliderChange, 4000);
-}
+
+setInterval(sliderChange, 4000);
 	
 
