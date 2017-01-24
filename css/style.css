@@ -1,5 +1,6 @@
 html {
 	font-size:10px;
+	min-width:1120px;
 }
 body {
 	font-size:1.4rem;
@@ -258,7 +259,7 @@ nav a:hover,nav .active {
 	height:24px;
 	background: rgba(0,0,0,0.5);
 	font-size:1.2rem;
-	margin:0 5px;
+	padding:0 5px;
 }
 .rating-bar .category {
 	color:#FFFFFF;
