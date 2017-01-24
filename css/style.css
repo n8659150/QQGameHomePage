@@ -197,7 +197,7 @@ nav a:hover,nav .active {
 }
 .category-tab a {
 	display: inline-block;
-	margin: 0 6px;
+	margin: 0 5px;
 	font-size: 1.4rem;
 	color: #666666;
 }
