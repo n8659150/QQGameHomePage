@@ -1,5 +1,5 @@
 "use strict";
-window.onload = (function(){
+$(document).ready(function(){
 // slider.js
 // 设定初始化的轮播图背景
 let oSlider = document.getElementById("slider");
@@ -10,8 +10,7 @@ let oSliderThumb = document.getElementById("slider-thumbnail");
 //给轮播图右侧thumbnail设置悬停高亮及移出取消
 let aSliderThumbItems = oSliderThumb.getElementsByTagName("li");
 
-for (let i = 0; i
-<aSliderThumbItems.length;i++) {
+for (let i = 0; i<aSliderThumbItems.length;i++) {
 	let oDiv = aSliderThumbItems[i].getElementsByTagName("div")[0];
 	oDiv.addEventListener("mouseover", function(){
 		setActive(this);
@@ -68,6 +67,7 @@ let oRankingList = document.getElementById("ranking-list");
 let aRankingItems = oRankingList.getElementsByClassName("ranking-content");
 let oHotListTab = document.getElementById("hot-list-tab");
 let oNewListTab = document.getElementById("new-list-tab");
+
 function fetchRankingList(sourcename){
 	let xmlhttp = new XMLHttpRequest();
 	let sourceUrl = "js/"+sourcename+".json";
@@ -79,15 +79,23 @@ function fetchRankingList(sourcename){
 let hotRankingList = fetchRankingList("hotRankingListData");
 let newGameRankingList = fetchRankingList("newRankingListData");
 
+// function rankingListLoader(list){
+// 	for(let i=0;i<aRankingItems.length;i++){
+// 		for(let j=0;j<list.length;j++){
+// 			let rankingItem = aRankingItems[j];
+// 			let listData = list[j];
+// 			rankingItem.getElementsByClassName("ranking-number")[0].innerHTML=listData["rank"];
+// 			rankingItem.getElementsByClassName("ranking-name")[0].innerHTML=listData["name"];
+// 			rankingItem.getElementsByClassName("ranking-count")[0].innerHTML=listData["count"];
+// 		}
+// 	}
+// }
 function rankingListLoader(list){
-	for(let i=0;i<aRankingItems.length;i++){
-		for(let j=0;j<list.length;j++){
-			let rankingItem = aRankingItems[j];
-			let listData = list[j];
-			rankingItem.getElementsByClassName("ranking-number")[0].innerHTML=listData["rank"];
-			rankingItem.getElementsByClassName("ranking-name")[0].innerHTML=listData["name"];
-			rankingItem.getElementsByClassName("ranking-count")[0].innerHTML=listData["count"];
-		}
+	let ele = $("#ranking-list").find(".ranking-content");
+	for (let i=0;i<list.length;i++){
+		ele.find(".ranking-number").eq(i).text(list[i]["rank"]);
+		ele.find(".ranking-name").eq(i).text(list[i]["name"]);
+		ele.find(".ranking-count").eq(i).text(list[i]["count"]);
 	}
 }
 oHotListTab.addEventListener("mouseover", function(){
