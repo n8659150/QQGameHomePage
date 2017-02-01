@@ -1,15 +1,23 @@
 "use strict";
 $(document).ready(function(){
+	$('#slider').unslider({
+		nav:false,
+		arrows:false,
+		autoplay:true,
+		delay:4000
+	});
 // slider.js
 // 设定初始化的轮播图背景
-$("#slider").css({"background":"url(images/slides/slider-1.jpg) no-repeat"});
+// $("#slider").css({"background":"url(images/slides/slider-1.jpg) no-repeat"});
 var sliderIndex = 1;
 //给轮播图右侧thumbnail设置悬停高亮及移出取消
 let aSliderThumbItems = $("#slider-thumbnail").find("li");
-
+// let timer = setInterval(sliderChange, 4000);
 for (let i = 0; i<aSliderThumbItems.length;i++) {
+
 	let oDiv = $("#slider-thumbnail").find("li").eq(i).find("div:first");
 	oDiv.mouseover(function(){
+		$("#slider").css({"background":"url(images/slides/slider-"+ (i+1) +".jpg) no-repeat"});
 		setActive(this);
 	});
 	oDiv.mouseout(function(){
@@ -32,6 +40,7 @@ function cancelActive(element) {
 }
 
 function sliderChange(){
+	console.log(sliderIndex)
 	//重置所有高亮样式
 	//let aSliderThumbItems = oSliderThumb.getElementsByTagName("li");
 	let aSliderThumbItems = $("#slider-thumbnail").find("li");
@@ -39,16 +48,15 @@ function sliderChange(){
 		cancelActive(aSliderThumbItems.eq(j).find("div:first"));
 	}
 	//根据当前轮播图背景设置高亮
-	let oLi = $("#slider-thumbnail").find("li").eq(sliderIndex-1);
+	let oLi = $("#slider-thumbnail").find("li").eq(sliderIndex);
 	let oDiv = oLi.find("div:first");
 	setActive(oDiv);
-	$("#slider").css({"background":"url(images/slides/slider-"+ (sliderIndex) +".jpg) no-repeat"});
+	//$("#slider").css({"background":"url(images/slides/slider-"+ (sliderIndex) +".jpg) no-repeat"});
 	//oSlider.style.background = "url(images/slides/slider-"+ (sliderIndex) +".jpg) no-repeat";
 	sliderIndex>
-	3?sliderIndex=1:sliderIndex++;
+	2?sliderIndex=0:sliderIndex++;
 };
-setInterval(sliderChange, 4000);
-
+	setInterval(sliderChange,4000)
 // gameTabPicLoader.js
 
 // 热门游戏
