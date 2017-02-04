@@ -105,10 +105,10 @@ function rankingListLoader(list){
 }
 
 $("#hot-list-tab").mouseover(function(){
-		rankingListLoader(hotRankingList);
+	rankingListLoader(hotRankingList);
 	});
 $("#new-list-tab").mouseover(function(){
-		rankingListLoader(newGameRankingList);
+	rankingListLoader(newGameRankingList);
 	});
 rankingListLoader(hotRankingList);
 // appGameLoader.js
